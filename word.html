@@ -9,9 +9,15 @@
 <body>
   <div class="header">
     <div class="menu">
-      <button id="fileMenu">File</button>
-      <button id="insertMenu">Insert</button>
-    </div>
+              <button id="fileMenu">File</button>
+              <button id="homeMenu">Home</button>
+              <button id="insertMenu">Insert</button>
+              <button id="pageLayoutMenu">Page Layout</button>
+              <button id="referencesMenu">References</button>
+              <button id="reviewMenu">Review</button>
+              <button id="viewMenu">View</button>
+            </div>
+
     <div class="toolbar">
       <button id="boldBtn"><b>B</b></button>
       <button id="italicBtn"><i>I</i></button>
@@ -29,11 +35,28 @@
         <option value="Times New Roman">Times New Roman</option>
         <option value="Courier New">Courier New</option>
       </select>
+      <input type="color" id="fontColorPicker">
+      <button id="paragraphStyleBtn">Paragraph Style</button>
+      <button id="clipboardBtn">Clipboard</button>
+      <button id="findReplaceBtn">Find & Replace</button>
     </div>
   </div>
   <div id="editor" contenteditable="true">
     <p>Type your text here...</p>
   </div>
+
+  <div id="findReplaceModal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h2>Find & Replace</h2>
+      <label for="findInput">Find:</label>
+      <input type="text" id="findInput"><br>
+      <label for="replaceInput">Replace with:</label>
+      <input type="text" id="replaceInput"><br>
+      <button id="findReplaceBtn">Replace All</button>
+    </div>
+  </div>
+    
   <script src="script.js"></script>
 </body>
 </html>

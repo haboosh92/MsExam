@@ -5,34 +5,70 @@ body {
   }
   
   .header {
-    background-color: #f2f2f2;
+    background-color: #2b5797; /* Microsoft Word's header color */
+    color: white;
     padding: 10px;
     display: flex;
     justify-content: space-between;
+    align-items: center;
   }
   
   .menu button {
     margin-right: 10px;
+    background-color: transparent;
+    border: none;
+    color: white;
+    cursor: pointer;
+    font-size: 14px;
+    padding: 5px 10px;
   }
   
   .toolbar {
     padding: 10px;
+   /* background-color: #f2f2f2; */
+    border-bottom: 1px solid #ccc; /* Divider line similar to Word */
   }
   
   #editor {
+    width: 21cm; /* A4 paper width */
+    height: 29.7cm; /* A4 paper height */
+    margin: 20px auto; /* Center the work area */
     border: 1px solid #ccc;
-    min-height: 200px;
-    padding: 10px;
+    padding: 20px;
+    background-color: white; /* Background color similar to Word */
   }
   
-  @media (max-width: 600px) {
-    .header {
-      flex-direction: column;
-      align-items: center;
-    }
-  
-    .menu {
-      margin-bottom: 10px;
-    }
+  .modal {
+    display: none;
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
   }
   
+  .modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 50%; /* Could be more or less, depending on screen size */
+  }
+  
+  .close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  }
+    
